@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+
+<button onclick="changeAll()">Uppercase</button>
+
+<div id="myDIV">
+There are seven words in this sentence!
+</div>
+
+
+<script>
+function changeAll() {
+    var x = document.getElementById("myDIV").innerHTML;
+    document.getElementById("myDIV").innerHTML= x.toUpperCase();
+}
+</script>
+
+</body>
+</html>

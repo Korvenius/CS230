@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+
+<button onclick="underlineText()">Underline</button>
+
+<div id="myDIV">
+There are 7 words in this sentence.
+</div>
+
+<script>
+function underlineText() {
+    var x = document.getElementById("myDIV").innerText.trim();
+    var xArray = x.split("");
+    var result="";
+    var hasNumber = /\d/
+
+    for(var i=0; i<xArray.length; i++){
+    
+    			if(hasNumber.test(xArray[i])){
+      		xArray[i] = "<u>"+xArray[i]+"</u>";
+      }
+      
+      result+=xArray[i];
+    
+    }
+    document.getElementById("myDIV").innerHTML=result; 
+}
+</script>
+
+</body>
